@@ -24,11 +24,12 @@ export const Header = (props) => {
   };
   return (
     <div className="hp-header-container hp-header">
-      <div className="hp-header-left hp-header" >
-        <MenuIcon style={iconColor} 
-        onClick={() =>{
-          props.onClickMenu();
-        }}
+      <div className="hp-header-left hp-header">
+        <MenuIcon
+          style={iconColor}
+          onClick={() => {
+            props.onClickMenu();
+          }}
         />
         <img className="header__logo" src={yt_logo} alt="youtube" />
       </div>
@@ -53,6 +54,27 @@ export const Header = (props) => {
               )}
             </div>
           </div>
+          <button>
+            <SearchIcon style={iconColor} sx={{ fontSize: 30 }} />
+          </button>
+        </div>
+        <Avatar sx={{ bgcolor: "#121212", width: 35, height: 35 }}>
+          <KeyboardVoiceIcon />
+        </Avatar>
+      </div>
+      <div className="hp-header-right hp-header">
+        <div className="r-icon">
+          <VideoCallIcon style={iconColor} />
+        </div>
+        <div className="r-icon">
+          {" "}
+          <AppsIcon style={iconColor} />
+        </div>
+        <div className="r-icon">
+          <NotificationsIcon style={iconColor} />
+        </div>
+        <div className="r-icon">
+          <Avatar sx={{ bgcolor: "#4488d1", width: 35, height: 35 }}>S</Avatar>
         </div>
       </div>
     </div>
